@@ -7,12 +7,12 @@ import { GoArrowUpRight } from 'react-icons/go';
 const Header = () => {
     
     const Links = <>
-        <li className='text-[16px] font-medium'><NavLink>Services</NavLink></li>
-        <li className='text-[16px] font-medium'><NavLink>Coverage</NavLink></li>
-        <li className='text-[16px] font-medium'><NavLink>About Us</NavLink></li>
-        <li className='text-[16px] font-medium'><NavLink>Pricing</NavLink></li>
-        <li className='text-[16px] font-medium'><NavLink>Blog</NavLink></li>
-        <li className='text-[16px] font-medium'><NavLink>Contact</NavLink></li>
+        <li className='text-[16px] font-medium'><NavLink to={"/services"}>Services</NavLink></li>
+        <li className='text-[16px] font-medium'><NavLink to={"/coverage"}>Coverage</NavLink></li>
+        <li className='text-[16px] font-medium'><NavLink to={"/about"}>About Us</NavLink></li>
+        <li className='text-[16px] font-medium'><NavLink to={"/pricing"}>Pricing</NavLink></li>
+        <li className='text-[16px] font-medium'><NavLink to={"/blog"}>Blog</NavLink></li>
+        <li className='text-[16px] font-medium'><NavLink to={"/contact"}>Contact</NavLink></li>
     </>
 
     return (
@@ -29,7 +29,7 @@ const Header = () => {
                       {Links}
                 </ul>
               </div>
-              <a className="btn btn-ghost text-xl"><Logo></Logo></a>
+              <NavLink to={"/"} className="text-xl"><Logo></Logo></NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
               <ul className="menu menu-horizontal px-1">
@@ -37,8 +37,8 @@ const Header = () => {
               </ul>
             </div>
             <div className="navbar-end flex gap-2">
-              <NavLink className="btn px-6 py-5 font-bold text-[#0B0B0B] bg-white rounded-2xl text-[20px]">Sign In</NavLink>
-              <NavLink className="btn px-6 py-5 font-bold text-[#0B0B0B] bg-primary rounded-2xl text-[20px]">Sign Up</NavLink>
+              <NavLink to={"/sign-in"} className="btn px-6 py-5 font-bold text-[#0B0B0B] bg-white rounded-2xl text-[20px]">Sign In</NavLink>
+              <NavLink to={"/sign-out"} className="btn px-6 py-5 font-bold text-[#0B0B0B] bg-primary rounded-2xl text-[20px]">Sign Up</NavLink>
               {/* <FaArrowAltCircleUp className='rotate-45 h-10 w-10 -ms-2.5' /> */}
               <div className='h-10 w-10 bg-secondary font-bold text-primary -ms-2.5 rounded-4xl flex items-center justify-center'>
                 <GoArrowUpRight />

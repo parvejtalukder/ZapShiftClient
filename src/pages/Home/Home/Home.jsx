@@ -1,9 +1,25 @@
 import React from 'react';
+import Banner from '../Banner/Banner';
+import Marchant from '../Marchant/Marchant'
+import Button from '../../../components/Button/Button';
+import Arrow from '../../../components/Arrow/Arrow';
 
 const Home = () => {
+
+    const FAQ = {
+        url: "faq",
+        name: "More FAQ",
+        bg: "bg-primary"
+    }
+
     return (
-        <div>
-            <h2>Home Page</h2>
+        <div className='my-10'>
+            <Banner></Banner>
+            <Marchant></Marchant>
+            <div className='flex justify-center items-center pt-10'>
+                <Button BTN={FAQ}></Button> 
+                <Arrow></Arrow>
+            </div>
         </div>
     );
 };
